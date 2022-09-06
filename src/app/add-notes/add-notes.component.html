@@ -1,12 +1,25 @@
 <form (ngSubmit)="onSubmit()">
-    <div class="mb-3">
-      <label for="title-note-content" class="form-label">Notes Title</label>
-      <input type="text" [(ngModel)]="notesTitle" class="form-control" name="title" id="title" aria-describedby="emailHelp">
-    </div>
-    <div class="mb-3">
-      <label for="note" class="form-label">Note</label>
-      <input type="text" [(ngModel)]="noteContent" class="form-control" name="title" id="title" aria-describedby="emailHelp">
-    </div>
-    <button type="submit" class="btn btn-primary">Add Note</button>
-    <!-- <button type="button" (click)="onDelete()" class="btn btn-primary" >Delete All</button> -->
-  </form>
+  <div class="mb-3">
+    <label for="title-note-content" class="form-label">Notes Title</label>
+    <input
+      type="text"
+      [(ngModel)]="notesTitle"
+      class="form-control"
+      name="title"
+      id="title"
+      aria-describedby="emailHelp"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="note" class="form-label">Note</label>
+    <input
+      type="text"
+      [(ngModel)]="noteContent"
+      class="form-control"
+      name="title"
+      id="title"
+      aria-describedby="emailHelp"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Add Note</button>
+</form>

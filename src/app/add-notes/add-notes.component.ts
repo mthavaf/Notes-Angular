@@ -10,7 +10,6 @@ export class AddNotesComponent implements OnInit {
   notesTitle!: String;
   noteContent!: String;
   @Output() whenNoteAddedCallThis: EventEmitter<Note> = new EventEmitter();
-  // @Output() whenNoteDeletedCallThis: EventEmitter<Note> = new EventEmitter();
 
   constructor() {}
 
@@ -22,11 +21,4 @@ export class AddNotesComponent implements OnInit {
     };
     this.whenNoteAddedCallThis.emit(note);
   }
-  // onDelete() {
-  //   const note = {
-  //     notesTitle: this.notesTitle,
-  //     noteContent: this.noteContent,
-  //   };
-  //   this.whenNoteDeletedCallThis.emit(note);
-  // }
 }

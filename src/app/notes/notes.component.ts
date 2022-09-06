@@ -25,8 +25,8 @@ export class NotesComponent implements OnInit {
     localStorage.setItem('notes', JSON.stringify(this.notes));
   }
   deleteNote(note: Note) {
-    const index= this.notes.indexOf(note);
-    this.notes.splice(index,1);
-    localStorage.setItem('notes',JSON.stringify(this.notes));
+    const index = this.notes.indexOf(note);
+    this.notes.splice(index, 1);
+    localStorage.setItem('notes', JSON.stringify(this.notes));
   }
 }

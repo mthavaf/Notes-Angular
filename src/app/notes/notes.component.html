@@ -1,5 +1,5 @@
 <app-add-notes (noteAdd)="addNote($event)"></app-add-notes>
-<h3>Notes:</h3>
+<h3>Added Notes</h3>
 <div *ngFor="let i of notes">
     <app-dis-notes [i]="i"></app-dis-notes>
 </div>

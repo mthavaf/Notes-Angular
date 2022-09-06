@@ -9,7 +9,9 @@ import { Note } from '../Note';
 export class AddNotesComponent implements OnInit {
   notesTitle!: String;
   noteContent!: String;
-  @Output() noteAdd: EventEmitter<Note> = new EventEmitter();
+  @Output() whenNoteAddedCallThis: EventEmitter<Note> = new EventEmitter();
+  @Output() whenNoteDeleteCallThis: EventEmitter<Note> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
@@ -19,7 +21,16 @@ export class AddNotesComponent implements OnInit {
       notesTitle: this.notesTitle,
       noteContent: this.noteContent,
     }
-    this.noteAdd.emit(note);
+    this.whenNoteAddedCallThis.emit(note);
+    
+    }
+    onDelete(){
+      const note = {
+        notesTitle: this.notesTitle,
+        noteContent: this.noteContent,
+      }
+    this.whenNoteDeleteCallThis.emit(note);
+      
   }
 
 }

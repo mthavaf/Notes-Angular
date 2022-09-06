@@ -28,5 +28,11 @@ export class NotesComponent implements OnInit {
     localStorage.setItem("notes",JSON.stringify(this.notes));
 
   }
+  deleteNote(note:Note){
+    alert("noteToBeDeleted"+JSON.stringify(note));
+    localStorage.setItem("notes",JSON.stringify(this.notes));
+
+  }
+
 
 }

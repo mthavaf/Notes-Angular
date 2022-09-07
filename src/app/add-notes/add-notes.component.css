@@ -2,6 +2,7 @@ input {
   width: 25em;
   height: 1.6em;
   margin-left: 27em;
+  text-align: center;
 }
 label {
     color: darkblue;

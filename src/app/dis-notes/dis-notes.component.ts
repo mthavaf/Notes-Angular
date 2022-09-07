@@ -13,12 +13,9 @@ export class DisNotesComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onDelete() {
-    const note = {
-      notesTitle: '',
-      noteContent: '',
-    };
-    this.whenNoteDeletedCallThis.emit(note);
+  onDelete(i:Note) {
+   
+    this.whenNoteDeletedCallThis.emit(i);
   }
 
 }

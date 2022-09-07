@@ -21,8 +21,12 @@ export class NotesComponent implements OnInit {
 
   ngOnInit(): void {}
   addNote(note: Note) {
-    this.notes.push(note);
-    localStorage.setItem('notes', JSON.stringify(this.notes));
+    if (note.notesTitle.length == 0) {
+      alert('enter the title');
+    } else {
+      this.notes.push(note);
+      localStorage.setItem('notes', JSON.stringify(this.notes));
+    }
   }
   deleteNote(note: Note) {
     const index = this.notes.indexOf(note);

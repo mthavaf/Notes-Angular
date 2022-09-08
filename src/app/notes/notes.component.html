@@ -1,8 +1,8 @@
 <app-add-notes (whenNoteAddedCallThis)="addNote($event)"></app-add-notes>
 <h3>Added Notes</h3>
-<div *ngFor="let i of notes">
+<div *ngFor="let note of notes">
   <app-dis-notes
-    [i]="i"
+    [note]="note"
     (whenNoteDeletedCallThis)="deleteNote($event)"
   ></app-dis-notes>
   <div class="space"></div>

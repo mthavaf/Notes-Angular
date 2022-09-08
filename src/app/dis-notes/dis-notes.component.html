@@ -1,10 +1,17 @@
 <div class="border border-warning">
-<div class="border border-info">
-<h3>{{i.notesTitle}}</h3>
-</div>
-<div class="border border-info">
-<p>{{i.noteContent}}</p>
-</div>
-<button class="deletenote" (click)="onDelete(i)">Delete</button>
-<br>
+  <div class="border border-info">
+    <h3>{{ note.notesTitle }}</h3>
+  </div>
+  <div class="border border-info">
+    <p>{{ note.noteContent }}</p>
+  </div>
+  <button class="deletenote" (click)="onDelete(note)">Delete</button>
+  <button class="editNote" (click)="onEdit()">Edit</button>
+  <div *ngIf="this.editChanger === true">
+    <app-edit-notes
+      [note]="note"
+      (whenNoteEditedCallThis)="editNote($event)"
+    ></app-edit-notes>
+  </div>
+  <br />
 </div>

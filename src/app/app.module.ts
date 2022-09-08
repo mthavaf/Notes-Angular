@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { AddNotesComponent } from './add-notes/add-notes.component';
 import { NotesComponent } from './notes/notes.component';
 import { DisNotesComponent } from './dis-notes/dis-notes.component';
+import { EditNotesComponent } from './edit-notes/edit-notes.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { DisNotesComponent } from './dis-notes/dis-notes.component';
     AddNotesComponent,
     NotesComponent,
     DisNotesComponent,
+    EditNotesComponent,
   ],
   imports: [
     BrowserModule,

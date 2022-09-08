@@ -1,4 +1,6 @@
-<app-add-notes (whenNoteAddedCallThis)="addNote($event)"></app-add-notes>
+<button (click)="openModal = true" type="button" class="btn btn-primary" style="float: right;">Add a Note</button>
+
+<app-add-notes (whenNoteAddedCallThis)="addNote($event)" *ngIf="openModal"></app-add-notes>
 <h3>Added Notes</h3>
 <div *ngFor="let note of notes">
   <app-dis-notes

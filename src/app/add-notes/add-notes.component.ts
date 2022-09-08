@@ -21,4 +21,8 @@ export class AddNotesComponent implements OnInit {
     };
     this.whenNoteAddedCallThis.emit(note);
   }
+
+  public closeModal(): void {
+    this.whenNoteAddedCallThis.emit(undefined);
+  }
 }

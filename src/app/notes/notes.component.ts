@@ -9,6 +9,7 @@ import { Note } from '../Note';
 export class NotesComponent implements OnInit {
   storage: string | null;
   notes: Note[];
+  public openModal = false;
 
   constructor() {
     this.storage = localStorage.getItem('notes');
@@ -21,6 +22,12 @@ export class NotesComponent implements OnInit {
 
   ngOnInit(): void {}
   addNote(note: Note) {
+    // if note is undefined then close button was pressed
+    if (!note) {
+      this.openModal = false;
+      return;
+    }
+
     if (note.notesTitle.length == 0) {
       alert('enter the title');
     } else {

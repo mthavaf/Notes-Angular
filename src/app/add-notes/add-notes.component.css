@@ -1,12 +1,12 @@
 input {
   width: 25em;
   height: 1.6em;
-  /* margin-left: 27em; */
+  margin-left: 20em;
   text-align: center;
 }
 label {
     color: darkblue;
-    /* padding-left: 39em; */
+    padding-left: 30em;
     font-weight: 610;
 }
 .btn-primary{
@@ -55,3 +55,6 @@ label {
   text-decoration: none;
   cursor: pointer;
 }
+
+.btn.btn-primary{
+  margin-left: 28em; }

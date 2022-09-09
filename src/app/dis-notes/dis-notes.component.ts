@@ -8,7 +8,7 @@ import { NotesComponent } from 'src/app/notes/notes.component';
   styleUrls: ['./dis-notes.component.css'],
 })
 export class DisNotesComponent implements OnInit {
-  editChanger: boolean = false;
+  public openModal = false;
   @Input() note!: Note;
   @Output() whenNoteDeletedCallThis: EventEmitter<Note> = new EventEmitter();
   importedClass: NotesComponent = new NotesComponent();
@@ -17,15 +17,15 @@ export class DisNotesComponent implements OnInit {
   onDelete(note: Note) {
     this.whenNoteDeletedCallThis.emit(note);
   }
-  onEdit() {
-    this.editChanger = true;
-  }
   editNote(note: Note) {
+    if (!note) {
+      this.openModal = false;
+      return;
+    }else
     {
       const index = this.importedClass.notes.indexOf(note);
       this.importedClass.notes.splice(index, 1, note);
       localStorage.setItem('notes', JSON.stringify(this.importedClass.notes));
-      this.editChanger = false;
     }
   }
 }

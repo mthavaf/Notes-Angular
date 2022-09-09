@@ -1,12 +1,30 @@
-.border-warning{
-    width: 45em;
-    height: 8em;
-    margin-left: 18em;
-    text-align: center;
+.border-warning {
+  width: 45em;
+  height: 8em;
+  margin-left: 18em;
+  text-align: center;
 }
-.deletenote{
-    background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
-    color: red;
-    font-weight: 700;
-    margin-top: 7px;
+.deletenote {
+  background-image: linear-gradient(
+    to right,
+    #f6d365 0%,
+    #fda085 51%,
+    #f6d365 100%
+  );
+  color: red;
+  font-weight: 700;
+  margin-top: 7px;
+  margin-right: 1.5em;
+}
+.editNote {
+  background-image: linear-gradient(
+    to right,
+    #f6d365 0%,
+    #fda085 51%,
+    #f6d365 100%
+  );
+  color: red;
+  font-weight: 700;
+  margin-top: 7px;
+  margin-left: 0.5em;
 }

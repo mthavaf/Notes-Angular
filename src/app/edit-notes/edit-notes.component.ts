@@ -19,11 +19,14 @@ export class EditNotesComponent implements OnInit {
 
   modifyNote() {
     if (this.notesEditedTitle.length === 0) {
-      console.log('working');
+      console.log('error');
     } else {
       this.note.notesTitle = this.notesEditedTitle;
       this.note.noteContent = this.noteEditedContent;
       this.whenNoteEditedCallThis.emit(this.note);
     }
+  }
+  public closeModal(): void {
+    this.whenNoteEditedCallThis.emit(undefined);
   }
 }

@@ -7,6 +7,7 @@ margin-left: 5em;
     border: 1px solid red; 
     width: 30%;
     float: left;
+    background-color: lightcyan;
 }
 
  .border-warning {

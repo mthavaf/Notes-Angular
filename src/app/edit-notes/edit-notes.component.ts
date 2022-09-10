@@ -18,7 +18,7 @@ export class EditNotesComponent implements OnInit {
   ngOnInit(): void {}
 
   modifyNote() {
-    if (this.note.notesTitle.length === 0) {
+    if (this.changedNoteTitle.length === 0) {
       console.log('error');
     } else {
       this.note.notesTitle = this.changedNoteTitle;

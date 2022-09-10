@@ -16,6 +16,10 @@ export class AddNotesComponent implements OnInit {
 
   ngOnInit(): void {}
   onSubmit() {
+    if(this.notesTitle.length===0){
+      console.log("empty title")
+    }
+    else{
     const uniqID = (new Date()).getTime();
     console.log(uniqID)
     const note = {
@@ -25,6 +29,7 @@ export class AddNotesComponent implements OnInit {
     };
     this.whenNoteAddedCallThis.emit(note);
   }
+}
 
   public closeModal(): void {
     this.whenNoteAddedCallThis.emit(undefined);

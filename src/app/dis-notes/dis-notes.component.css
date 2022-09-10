@@ -7,7 +7,7 @@ margin-left: 5em;
     border: 1px solid red; 
     width: 30%;
     float: left;
-    background-color: lightcyan;
+    background-image: linear-gradient(to right top, #f4ff00, #ceff21, #a4ff3c, #72ff55, #00ff6e);
 }
 
  .border-warning {
@@ -28,12 +28,7 @@ margin-left: 5em;
   margin-left: 32%;
 }
 .editNote {
-  background-image: linear-gradient(
-    to right,
-    #f6d365 0%,
-    #fda085 51%,
-    #f6d365 100%
-  );
+  background-image: linear-gradient(to right top, #bbfffc, #94f0fa, #6ce0fb, #40cffd, #00bdff);
   color: red;
   font-weight: 700;
   margin-left: 20px;

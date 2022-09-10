@@ -1,9 +1,12 @@
 .title-notes{
-    color: tomato;
-    width: 4em;
+    background-image: linear-gradient(to right top, #00f4ff, #00ded3, #00c7a4, #00af74, #029742);
+    width: 12em;
     height: 4em;
-    margin-left: 45%;
+    margin-left: 44%;
     margin-top: 1.5%;
+    padding-left: 1em;
+    color: black;
+    border-radius: 0.5em;
 }
 p{
     font-size: 3em;

@@ -2,8 +2,11 @@
   Add a Note
 </button>
 <app-add-notes (whenNoteAddedCallThis)="addNote($event)" *ngIf="openModal"></app-add-notes>
+<div *ngIf="this.notes.length===0; else elseBlock"><h3>No Notes Added</h3></div>
+<ng-template #elseBlock>
 <h3>Added Notes</h3>
 <div *ngFor="let note of notes">
   <app-dis-notes [note]="note" (whenNoteDeletedCallThis)="deleteNote($event)" (noteEdited)="updateNote($event)"></app-dis-notes>
   <!-- <div class="space"></div> -->
 </div>
+</ng-template>

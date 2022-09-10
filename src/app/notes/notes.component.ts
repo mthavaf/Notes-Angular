@@ -27,6 +27,7 @@ export class NotesComponent implements OnInit {
       this.openModal = false;
       return;
     }
+    this.openModal = false;
 
     if (note.notesTitle.length == 0) {
       alert('enter the title');
@@ -42,8 +43,12 @@ export class NotesComponent implements OnInit {
   }
 
   updateNote(note: Note) {
+    if (note.notesTitle.length == 0) {
+      alert('enter the title');
+    } else{
     const index=this.notes.findIndex(n=> n.noteId == note.noteId && n.notesTitle == note.notesTitle && n.noteContent == note.noteContent );
     this.notes.splice(index, 1,note);
     localStorage.setItem('notes', JSON.stringify(this.notes));
   }
+}
 }

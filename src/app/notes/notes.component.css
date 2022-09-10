@@ -1,8 +1,9 @@
 h3{
     color: blue;
-    padding-left: 20em;
-    padding-top: 1em
+    text-align: center;
 }
-.space{
-    padding-bottom: 1;
+.btn-primary{
+    margin-left: 46% !important;
+    margin-top: 1%;
+    margin-bottom: 3%;
 }

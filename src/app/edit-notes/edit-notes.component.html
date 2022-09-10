@@ -4,12 +4,12 @@
     <form (ngSubmit)="modifyNote()">
       <div class="mb-3">
         <label for="title-note-content" class="form-label">Title</label>
-        <input type="text" [(ngModel)]="changedNoteTitle"  [placeholder]="note.notesTitle" class="form-control" name="title" id="title"
+        <input type="text" [(ngModel)]="changedNoteTitle"  class="form-control" name="title" id="title"
           aria-describedby="emailHelp" />
       </div>
       <div class="mb-3">
         <label for="note" class="form-label">Note</label>
-        <input type="text" [(ngModel)]="changedNoteContent" [placeholder]="note.noteContent" class="form-control" name="content" id="content"
+        <input type="text" [(ngModel)]="changedNoteContent" class="form-control" name="content" id="content"
           aria-describedby="emailHelp" />
       </div>
       <button type="submit" class="btn btn-primary">Done</button>

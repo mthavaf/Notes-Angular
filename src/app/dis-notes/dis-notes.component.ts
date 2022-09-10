@@ -27,6 +27,7 @@ export class DisNotesComponent implements OnInit {
       this.openModal = false;
       return;
     }
+    this.openModal = false;
     this.noteEdited.emit(note);
 
   }

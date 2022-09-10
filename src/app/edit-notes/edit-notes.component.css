@@ -6,14 +6,14 @@ input {
   }
   label {
       color: darkblue;
-      /* padding-left: 39em; */
+      padding-left: 50%;
       font-weight: 610;
   }
   .btn-primary{
       width: 95px;
       height: 30px;
       padding: 0;
-      /* margin-left: 37em */
+      margin-left: 47%
       
   } 
   

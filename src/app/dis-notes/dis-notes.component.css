@@ -1,9 +1,20 @@
-.border-warning {
+.parent{
+margin-left: 5em;
+
+}
+.child {
+  margin: 10px; 
+    border: 1px solid red; 
+    width: 30%;
+    float: left;
+}
+
+ .border-warning {
   width: 45em;
   height: 8em;
   margin-left: 18em;
   text-align: center;
-}
+} 
 .deletenote {
   background-image: linear-gradient(
     to right,
@@ -13,8 +24,7 @@
   );
   color: red;
   font-weight: 700;
-  margin-top: 7px;
-  margin-right: 1.5em;
+  margin-left: 32%;
 }
 .editNote {
   background-image: linear-gradient(
@@ -25,6 +35,14 @@
   );
   color: red;
   font-weight: 700;
-  margin-top: 7px;
-  margin-left: 0.5em;
+  margin-left: 20px;
+  margin-bottom: 5%;
+
+} 
+h3{
+  color: blueviolet;
+  text-align: center;
+}
+p{
+  text-align: center;
 }

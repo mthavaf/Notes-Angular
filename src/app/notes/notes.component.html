@@ -4,6 +4,6 @@
 <app-add-notes (whenNoteAddedCallThis)="addNote($event)" *ngIf="openModal"></app-add-notes>
 <h3>Added Notes</h3>
 <div *ngFor="let note of notes">
-  <app-dis-notes [note]="note" (whenNoteDeletedCallThis)="deleteNote($event)"></app-dis-notes>
+  <app-dis-notes [note]="note" (whenNoteDeletedCallThis)="deleteNote($event)" (noteEdited)="updateNote($event)"></app-dis-notes>
   <div class="space"></div>
 </div>

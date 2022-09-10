@@ -44,9 +44,10 @@ label {
 /* The Close Button */
 .close {
   color: #aaa;
-  float: right;
+  padding-left: 32em;
   font-size: 28px;
   font-weight: bold;
+  
 }
 
 .close:hover,

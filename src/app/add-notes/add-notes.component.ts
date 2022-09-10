@@ -7,6 +7,7 @@ import { Note } from '../Note';
   styleUrls: ['./add-notes.component.css'],
 })
 export class AddNotesComponent implements OnInit {
+  noteId!:Number;
   notesTitle!: String;
   noteContent!: String;
   @Output() whenNoteAddedCallThis: EventEmitter<Note> = new EventEmitter();
@@ -15,7 +16,10 @@ export class AddNotesComponent implements OnInit {
 
   ngOnInit(): void {}
   onSubmit() {
+    const uniqID = (new Date()).getTime();
+    console.log(uniqID)
     const note = {
+      noteId :uniqID,
       notesTitle: this.notesTitle,
       noteContent: this.noteContent,
     };

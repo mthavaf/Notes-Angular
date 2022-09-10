@@ -40,4 +40,10 @@ export class NotesComponent implements OnInit {
     this.notes.splice(index, 1);
     localStorage.setItem('notes', JSON.stringify(this.notes));
   }
+
+  updateNote(note: Note) {
+    const index=this.notes.findIndex(n=> n.noteId == note.noteId && n.notesTitle == note.notesTitle && n.noteContent == note.noteContent );
+    this.notes.splice(index, 1,note);
+    localStorage.setItem('notes', JSON.stringify(this.notes));
+  }
 }

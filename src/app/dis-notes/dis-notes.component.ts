@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Note } from '../Note';
-import { NotesComponent } from 'src/app/notes/notes.component';
 
 @Component({
   selector: 'app-dis-notes',
@@ -11,21 +10,24 @@ export class DisNotesComponent implements OnInit {
   public openModal = false;
   @Input() note!: Note;
   @Output() whenNoteDeletedCallThis: EventEmitter<Note> = new EventEmitter();
-  importedClass: NotesComponent = new NotesComponent();
+  @Output() noteEdited: EventEmitter<Note> = new EventEmitter();
+  
+  // importedClass: NotesComponent = new NotesComponent(); // hehe... good one. don't overuse your head!
   constructor() {}
   ngOnInit(): void {}
   onDelete(note: Note) {
     this.whenNoteDeletedCallThis.emit(note);
   }
   editNote(note: Note) {
+    // you want to pass data from C -> B -> A. you thought you can create A from B and update A. you can't do that
+
+    // like you passed from C -> B. do the same B -> A.
+
     if (!note) {
       this.openModal = false;
       return;
-    }else
-    {
-      const index = this.importedClass.notes.indexOf(note);
-      this.importedClass.notes.splice(index, 1, note);
-      localStorage.setItem('notes', JSON.stringify(this.importedClass.notes));
     }
+    this.noteEdited.emit(note);
+
   }
 }

@@ -1,7 +1,7 @@
 input {
     width: 25em;
     height: 1.6em;
-    margin-left: 20em;
+    margin-left: 31%;
     text-align: center;
   }
   label {
@@ -47,7 +47,7 @@ input {
     float: right;
     font-size: 28px;
     font-weight: bold;
-    padding-left: 32em;
+    padding-left: 95%;
   }
   
   .close:hover,

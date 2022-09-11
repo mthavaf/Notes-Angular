@@ -1,12 +1,12 @@
  input {
   width: 25em;
   height: 1.6em;
-  margin-left: 20em;
+  margin-left: 31%;
   text-align: center;
 }
 label {
     color: darkblue;
-    padding-left: 30em;
+    padding-left: 49%;
     font-weight: 610;
 }
 .btn-primary{
@@ -44,7 +44,7 @@ label {
 /* The Close Button */
 .close {
   color: #aaa;
-  padding-left: 32em;
+  padding-left: 95%;
   font-size: 28px;
   font-weight: bold;
   

@@ -8,21 +8,18 @@ import { Note } from '../Note';
 })
 export class EditNotesComponent implements OnInit {
   @Output() whenNoteEditedCallThis: EventEmitter<Note> = new EventEmitter();
-  @Input()
-  note: Note = new Note();
-  changedNoteTitle!: String;
-  changedNoteContent!: String;
+  @Input() note: Note = new Note();
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.note = structuredClone(this.note);
+  }
 
   modifyNote() {
-    if (this.changedNoteTitle.length === 0) {
+    if (this.note.notesTitle.length === 0) {
       console.log('error');
     } else {
-      this.note.notesTitle = this.changedNoteTitle;
-      this.note.noteContent = this.changedNoteContent;
       this.whenNoteEditedCallThis.emit(this.note);
     }
   }

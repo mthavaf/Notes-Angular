@@ -8,6 +8,7 @@ import { AddNotesComponent } from './add-notes/add-notes.component';
 import { NotesComponent } from './notes/notes.component';
 import { DisNotesComponent } from './dis-notes/dis-notes.component';
 import { EditNotesComponent } from './edit-notes/edit-notes.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EditNotesComponent } from './edit-notes/edit-notes.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

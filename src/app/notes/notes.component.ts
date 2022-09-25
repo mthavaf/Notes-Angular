@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Note } from '../Note';
+import { NotesService } from '../services/notes.service';
 
 @Component({
   selector: 'app-notes',
@@ -7,17 +8,26 @@ import { Note } from '../Note';
   styleUrls: ['./notes.component.css'],
 })
 export class NotesComponent implements OnInit {
-  storage: string | null;
-  notes: Note[];
+  notes: Note[] = [];
   public openModal = false;
 
-  constructor() {
-    this.storage = localStorage.getItem('notes');
-    if (this.storage == null) {
-      this.notes = [];
-    } else {
-      this.notes = JSON.parse(this.storage);
-    }
+  constructor(private notesService: NotesService) {
+    this.notesService.getNotes().subscribe((notes: any[]) => {
+      this.notes = notes.map(note => {
+        return {
+          noteId: note.noteId,
+    notesTitle: note.noteTitle,
+    noteContent: note.noteContent
+        }
+      });
+    });
+    // // this.storage = localStorage.getItem('notes');
+    // if (this.storage == null) {
+    //   this.notes = [];
+    // } else {
+    //   // this.notes = JSON.parse(this.storage);
+      
+    // }
   }
 
   ngOnInit(): void {}
@@ -33,7 +43,11 @@ export class NotesComponent implements OnInit {
       alert('enter the title');
     } else {
       this.notes.push(note);
-      localStorage.setItem('notes', JSON.stringify(this.notes));
+      // localStorage.setItem('notes', JSON.stringify(this.notes));
+      this.notesService.addNote(note).subscribe(() => {
+        console.log('done adding');
+        
+      });
     }
   }
   deleteNote(note: Note) {
@@ -46,9 +60,13 @@ export class NotesComponent implements OnInit {
     if (note.notesTitle.length == 0) {
       alert('enter the title');
     } else{
-    const index=this.notes.findIndex(n=> n.noteId == note.noteId && n.notesTitle == note.notesTitle && n.noteContent == note.noteContent );
-    this.notes.splice(index, 1,note);
-    localStorage.setItem('notes', JSON.stringify(this.notes));
+    // const index=this.notes.findIndex(n=> n.noteId == note.noteId && n.notesTitle == note.notesTitle && n.noteContent == note.noteContent );
+    // this.notes.splice(index, 1,note);
+    // localStorage.setItem('notes', JSON.stringify(this.notes));
+    this.notesService.updateNotes(note).subscribe(() => {
+      console.log('done update');
+      window.location.reload();
+    });
   }
 }
 }
